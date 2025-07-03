@@ -1,0 +1,6 @@
+@ApropiAPI_HostAddress = http://localhost:5089
+
+GET {{ApropiAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
