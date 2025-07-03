@@ -10,11 +10,11 @@ public class Empleado
     
     [Required]
     [MaxLength(100)]
-    public string Nombre { get; set; } = string.Empty;
+    public string Nombres { get; set; } = string.Empty;
     
     [Required]
     [MaxLength(100)]
-    public string Apellido { get; set; } = string.Empty;
+    public string Apellidos { get; set; } = string.Empty;
     
     [Required]
     [MaxLength(20)]
@@ -56,7 +56,7 @@ public class Empleado
     
     [Required]
     [MaxLength(50)]
-    public string Tipo { get; set; } = string.Empty; // Administrador, Corredor, Vendedor, Asistente, etc.
+    public string TipoEmpleado { get; set; } = string.Empty; // Administrador, Corredor, Vendedor, Asistente, etc.
     
     [Column(TypeName = "decimal(18,2)")]
     public decimal? SalarioBase { get; set; }
@@ -100,7 +100,14 @@ public class Empleado
     
     public DateTime? FechaActualizacion { get; set; }
     
+    public DateTime? FechaEliminacion { get; set; }
+    
     public bool Activo { get; set; } = true;
+    
+    // Calculated property for reports
+    public decimal? Comision => (PorcentajeComision.HasValue && Contratos.Any()) 
+        ? Contratos.Sum(c => c.MontoAlquiler) * (PorcentajeComision.Value / 100) + (ComisionFija ?? 0)
+        : ComisionFija;
     
     // Relaciones
     public virtual ICollection<Contrato> Contratos { get; set; } = new List<Contrato>();

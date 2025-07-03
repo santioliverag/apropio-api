@@ -32,7 +32,7 @@ public class Inmueble
     
     [Required]
     [MaxLength(50)]
-    public string Tipo { get; set; } = string.Empty; // Casa, Departamento, Local, Oficina, etc.
+    public string TipoInmueble { get; set; } = string.Empty; // Casa, Departamento, Local, Oficina, etc.
     
     [Required]
     [MaxLength(50)]
@@ -82,6 +82,8 @@ public class Inmueble
     public DateTime FechaCreacion { get; set; } = DateTime.Now;
     
     public DateTime? FechaActualizacion { get; set; }
+    
+    public DateTime? FechaEliminacion { get; set; }
     
     public bool Activo { get; set; } = true;
     

@@ -18,6 +18,7 @@ public class ApropiDbContext : DbContext
     public DbSet<Visita> Visitas { get; set; }
     public DbSet<PagoAlquiler> PagosAlquiler { get; set; }
     public DbSet<ReferenciaInquilino> ReferenciasInquilinos { get; set; }
+    public DbSet<Usuario> Usuarios { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -31,7 +32,7 @@ public class ApropiDbContext : DbContext
             entity.Property(e => e.Superficie).HasPrecision(10, 2);
             entity.Property(e => e.SuperficieCubierta).HasPrecision(10, 2);
             entity.HasIndex(e => e.Direccion);
-            entity.HasIndex(e => new { e.Ciudad, e.Tipo });
+            entity.HasIndex(e => new { e.Ciudad, e.TipoInmueble });
             entity.HasIndex(e => e.Precio);
         });
 
@@ -73,7 +74,7 @@ public class ApropiDbContext : DbContext
             entity.Property(e => e.ComisionFija).HasPrecision(18, 2);
             entity.HasIndex(e => e.Dni).IsUnique();
             entity.HasIndex(e => e.Email).IsUnique();
-            entity.HasIndex(e => e.Tipo);
+            entity.HasIndex(e => e.TipoEmpleado);
         });
 
         // Configuración de Contrato
@@ -148,5 +149,15 @@ public class ApropiDbContext : DbContext
             .WithMany(p => p.Inmuebles)
             .HasForeignKey(i => i.PropietarioId)
             .OnDelete(DeleteBehavior.SetNull);
+
+        // Configuración de Usuario
+        modelBuilder.Entity<Usuario>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.HasIndex(e => e.Email).IsUnique();
+            entity.HasIndex(e => e.NombreUsuario).IsUnique();
+            entity.Property(e => e.Email).IsRequired();
+            entity.Property(e => e.PasswordHash).IsRequired();
+        });
     }
 } 

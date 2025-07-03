@@ -43,6 +43,8 @@ public class Visita
     
     public DateTime? FechaActualizacion { get; set; }
     
+    public DateTime? FechaEliminacion { get; set; }
+    
     public bool Activo { get; set; } = true;
     
     // Relaciones

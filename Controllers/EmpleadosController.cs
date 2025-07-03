@@ -27,15 +27,15 @@ public class EmpleadosController : ControllerBase
         var query = _context.Empleados.Where(e => e.Activo);
 
         if (!string.IsNullOrEmpty(tipo))
-            query = query.Where(e => e.Tipo == tipo);
+            query = query.Where(e => e.TipoEmpleado == tipo);
 
         if (!string.IsNullOrEmpty(estado))
             query = query.Where(e => e.Estado == estado);
 
         if (!string.IsNullOrEmpty(busqueda))
         {
-            query = query.Where(e => e.Nombre.Contains(busqueda) || 
-                                   e.Apellido.Contains(busqueda) || 
+            query = query.Where(e => e.Nombres.Contains(busqueda) || 
+                                   e.Apellidos.Contains(busqueda) || 
                                    e.Dni.Contains(busqueda) ||
                                    e.Email!.Contains(busqueda));
         }
@@ -44,8 +44,8 @@ public class EmpleadosController : ControllerBase
         var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
 
         var empleados = await query
-            .OrderBy(e => e.Apellido)
-            .ThenBy(e => e.Nombre)
+            .OrderBy(e => e.Apellidos)
+            .ThenBy(e => e.Nombres)
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync();
@@ -101,8 +101,8 @@ public class EmpleadosController : ControllerBase
         }
 
         // Actualizar propiedades
-        existingEmpleado.Nombre = empleado.Nombre;
-        existingEmpleado.Apellido = empleado.Apellido;
+        existingEmpleado.Nombres = empleado.Nombres;
+        existingEmpleado.Apellidos = empleado.Apellidos;
         existingEmpleado.Dni = empleado.Dni;
         existingEmpleado.Email = empleado.Email;
         existingEmpleado.Telefono = empleado.Telefono;
@@ -115,7 +115,7 @@ public class EmpleadosController : ControllerBase
         existingEmpleado.EstadoCivil = empleado.EstadoCivil;
         existingEmpleado.Nacionalidad = empleado.Nacionalidad;
         existingEmpleado.Cargo = empleado.Cargo;
-        existingEmpleado.Tipo = empleado.Tipo;
+        existingEmpleado.TipoEmpleado = empleado.TipoEmpleado;
         existingEmpleado.SalarioBase = empleado.SalarioBase;
         existingEmpleado.PorcentajeComision = empleado.PorcentajeComision;
         existingEmpleado.ComisionFija = empleado.ComisionFija;

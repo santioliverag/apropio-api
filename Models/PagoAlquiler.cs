@@ -14,8 +14,7 @@ public class PagoAlquiler
     [Column(TypeName = "decimal(18,2)")]
     public decimal Monto { get; set; }
     
-    [Required]
-    public DateTime FechaPago { get; set; }
+    public DateTime? FechaPago { get; set; }
     
     [Required]
     public DateTime FechaVencimiento { get; set; }
@@ -36,6 +35,11 @@ public class PagoAlquiler
     public DateTime FechaCreacion { get; set; } = DateTime.Now;
     
     public DateTime? FechaActualizacion { get; set; }
+    
+    public DateTime? FechaEliminacion { get; set; }
+    
+    [MaxLength(100)]
+    public string? PeriodoPago { get; set; } // Enero 2024, Febrero 2024, etc.
     
     public bool Activo { get; set; } = true;
     

@@ -10,7 +10,7 @@ public class Contrato
     
     [Required]
     [MaxLength(50)]
-    public string Tipo { get; set; } = string.Empty; // Alquiler, Venta, AlquilerTemporal
+    public string TipoContrato { get; set; } = string.Empty; // Alquiler, Venta, AlquilerTemporal
     
     [Required]
     public int InmuebleId { get; set; }
@@ -51,7 +51,12 @@ public class Contrato
     
     public DateTime? FechaActualizacion { get; set; }
     
+    public DateTime? FechaEliminacion { get; set; }
+    
     public bool Activo { get; set; } = true;
+    
+    // Property for compatibility with reports
+    public decimal MontoAlquiler => MontoMensual ?? MontoTotal;
     
     // Relaciones
     public virtual Inmueble Inmueble { get; set; } = null!;

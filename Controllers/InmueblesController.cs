@@ -43,7 +43,7 @@ public class InmueblesController : ControllerBase
             query = query.Where(i => i.Ciudad.Contains(ciudad));
 
         if (!string.IsNullOrEmpty(tipo))
-            query = query.Where(i => i.Tipo == tipo);
+            query = query.Where(i => i.TipoInmueble == tipo);
 
         if (!string.IsNullOrEmpty(operacion))
             query = query.Where(i => i.Operacion == operacion);
@@ -91,7 +91,7 @@ public class InmueblesController : ControllerBase
             Ciudad = i.Ciudad,
             Provincia = i.Provincia,
             CodigoPostal = i.CodigoPostal,
-            Tipo = i.Tipo,
+            Tipo = i.TipoInmueble,
             Operacion = i.Operacion,
             Precio = i.Precio,
             Superficie = i.Superficie,
@@ -158,7 +158,7 @@ public class InmueblesController : ControllerBase
             Ciudad = inmueble.Ciudad,
             Provincia = inmueble.Provincia,
             CodigoPostal = inmueble.CodigoPostal,
-            Tipo = inmueble.Tipo,
+            Tipo = inmueble.TipoInmueble,
             Operacion = inmueble.Operacion,
             Precio = inmueble.Precio,
             Superficie = inmueble.Superficie,
@@ -209,7 +209,7 @@ public class InmueblesController : ControllerBase
             Ciudad = createInmuebleDto.Ciudad,
             Provincia = createInmuebleDto.Provincia,
             CodigoPostal = createInmuebleDto.CodigoPostal,
-            Tipo = createInmuebleDto.Tipo,
+            TipoInmueble = createInmuebleDto.Tipo,
             Operacion = createInmuebleDto.Operacion,
             Precio = createInmuebleDto.Precio,
             Superficie = createInmuebleDto.Superficie,
@@ -256,7 +256,7 @@ public class InmueblesController : ControllerBase
         inmueble.Ciudad = updateInmuebleDto.Ciudad;
         inmueble.Provincia = updateInmuebleDto.Provincia;
         inmueble.CodigoPostal = updateInmuebleDto.CodigoPostal;
-        inmueble.Tipo = updateInmuebleDto.Tipo;
+        inmueble.TipoInmueble = updateInmuebleDto.Tipo;
         inmueble.Operacion = updateInmuebleDto.Operacion;
         inmueble.Precio = updateInmuebleDto.Precio;
         inmueble.Superficie = updateInmuebleDto.Superficie;
