@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Apropio.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7edaa3d4cddc2373e9541985d3dc837460708d64")]
 [assembly: System.Reflection.AssemblyProductAttribute("Apropio.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Apropio.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

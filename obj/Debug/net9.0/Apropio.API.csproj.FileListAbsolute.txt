@@ -1,3 +1,11 @@
+/Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/Apropio.API.csproj.AssemblyReference.cache
+/Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/Apropio.API.GeneratedMSBuildEditorConfig.editorconfig
+/Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/Apropio.API.AssemblyInfoInputs.cache
+/Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/Apropio.API.AssemblyInfo.cs
+/Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/Apropio.API.csproj.CoreCompileInputs.cache
+/Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/Apropio.API.MvcApplicationPartsAssemblyInfo.cs
+/Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/Apropio.API.MvcApplicationPartsAssemblyInfo.cache
+/Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/Apropio.API.sourcelink.json
 /Users/santiolivera/Documents/personal-projects/saas/apropio/api/bin/Debug/net9.0/appsettings.Development.json
 /Users/santiolivera/Documents/personal-projects/saas/apropio/api/bin/Debug/net9.0/appsettings.json
 /Users/santiolivera/Documents/personal-projects/saas/apropio/api/bin/Debug/net9.0/Apropio.API.staticwebassets.endpoints.json
@@ -46,6 +54,9 @@
 /Users/santiolivera/Documents/personal-projects/saas/apropio/api/bin/Debug/net9.0/Microsoft.SqlServer.Server.dll
 /Users/santiolivera/Documents/personal-projects/saas/apropio/api/bin/Debug/net9.0/Microsoft.Win32.SystemEvents.dll
 /Users/santiolivera/Documents/personal-projects/saas/apropio/api/bin/Debug/net9.0/Mono.TextTemplating.dll
+/Users/santiolivera/Documents/personal-projects/saas/apropio/api/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/santiolivera/Documents/personal-projects/saas/apropio/api/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/santiolivera/Documents/personal-projects/saas/apropio/api/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/santiolivera/Documents/personal-projects/saas/apropio/api/bin/Debug/net9.0/System.ClientModel.dll
 /Users/santiolivera/Documents/personal-projects/saas/apropio/api/bin/Debug/net9.0/System.CodeDom.dll
 /Users/santiolivera/Documents/personal-projects/saas/apropio/api/bin/Debug/net9.0/System.Composition.AttributedModel.dll
@@ -138,13 +149,6 @@
 /Users/santiolivera/Documents/personal-projects/saas/apropio/api/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
 /Users/santiolivera/Documents/personal-projects/saas/apropio/api/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
 /Users/santiolivera/Documents/personal-projects/saas/apropio/api/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
-/Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/Apropio.API.csproj.AssemblyReference.cache
-/Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/Apropio.API.GeneratedMSBuildEditorConfig.editorconfig
-/Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/Apropio.API.AssemblyInfoInputs.cache
-/Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/Apropio.API.AssemblyInfo.cs
-/Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/Apropio.API.csproj.CoreCompileInputs.cache
-/Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/Apropio.API.MvcApplicationPartsAssemblyInfo.cs
-/Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/Apropio.API.MvcApplicationPartsAssemblyInfo.cache
 /Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/scopedcss/bundle/Apropio.API.styles.css
 /Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/staticwebassets.build.json
 /Users/santiolivera/Documents/personal-projects/saas/apropio/api/obj/Debug/net9.0/staticwebassets.development.json
